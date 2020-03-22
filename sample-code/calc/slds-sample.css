@@ -1,0 +1,15 @@
+.container {
+    width: 320px;
+    background-color: white;
+    margin: 120px auto;
+}
+#inputLabel {
+    height: 80px;
+    font-size: 40px;
+    /*
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 16px;
+    background-color: #ececec;
+    */
+}

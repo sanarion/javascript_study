@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc</title>
+  <!-- Sample CSS
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
+  <link href="sample.css" rel="stylesheet"/>
+  -->
+  <link href=".\node_modules\@salesforce-ux\design-system\assets\styles\salesforce-lightning-design-system.css" rel="stylesheet" />
+  <link rel="stylesheet" href="slds-sample.css">
+</head>
+<body>
+  <div class="slds">
+    <div class="container">
+      <table class="slds-table slds-table_header-hidden slds-no-row-hover slds-table_bordered slds-table_col-bordered" cellspacing="0">
+          <tr class="">
+              <td class="slds-text-body_large slds-text-align_right" colspan="4" id="inputLabel">0</td>
+          </tr>
+          <tr>
+              <td colspan="3"><button class="slds-button slds-button_brand slds-button_stretch " onclick="pushBtn(this);">AC</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">/</button></td>
+          </tr>
+          <tr>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">7</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">8</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">9</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">*</button></td>
+          </tr>
+          <tr>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">4</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">5</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">6</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">-</button></td>
+          </tr>
+          <tr>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">1</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">2</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">3</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">+</button></td>
+          </tr>
+          <tr>
+              <td colspan="2"><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">0</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">.</button></td>
+              <td><button class="slds-button slds-button_neutral slds-button_stretch" onclick="pushBtn(this);">=</button></td>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <script src="calc.js"></script>
+</body>
+</html>
