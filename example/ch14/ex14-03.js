@@ -6,7 +6,7 @@ function countdown(seconds) {
         () => {
           if (i === 13) {
             timeoutIds.forEach(clearTimeout);
-            onRejected(new Error("this number is so unlucky."));
+            onRejected(new Error(`${i} is so unlucky.`));
           }
           if (i > 0) {
             console.log(i + "...");
@@ -19,7 +19,18 @@ function countdown(seconds) {
     }
   });
 }
+
+function launch() {
+  return new Promise(function(onFulfilled,onRejected) {
+    console.log("Fire!");
+    setTimeout(() => {
+      onFulfilled("Take on line");
+    },2*1000);
+  });
+}
+
 //ex14-03-01
+/*
 countdown(15).then(
   function() {
     console.log("success!");
@@ -29,9 +40,21 @@ countdown(15).then(
   }
 )
 //ex14-03-1-3
-/*
+
 const p = countdown(15);
 p.then(() => console.log("success!"));
 p.catch((err) => console.log("Error : " + err.message));
 */
 
+//ex14-03-6
+countdown(5)
+  .then(launch)
+  .then(function(msg) {
+    console.log(msg);
+  })
+  .catch(function(err) {
+    console.error("Error occuerd" + err);
+  })
+
+
+  
