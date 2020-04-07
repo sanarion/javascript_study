@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>ex18-07</title>
+</head>
+<body>
+  <header>
+    <h1>スタイルの変更</h1>
+  </header>
+  <div id="buttonspace">
+    <input type="text" class="text1" name="word" id="searchkey">
+    <input type="button" class="c-button" value="検索" onclick="highlightParas();">
+    <button class="c-button" type="button" onclick="removeParaHighlights();">クリア</button>
+  </div>
+  <div id="content">
+    <p>第一段落にはユニークという単語が含まれています。</p>
+    <p>第二段落には含まれていません。</p>
+    <p>第三段落</p>
+    <p>ユニーク</p>
+    <p>ユニーク</p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

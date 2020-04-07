@@ -1,0 +1,38 @@
+.highlight {
+  background: #ffff00;
+  font-weight: bold;
+}
+.c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 5px 16px;
+  font-size: 16px;
+  min-width: 80px;
+  font-family: inherit;
+
+}
+.c-button:hover {
+  background: #1d49aa;
+}
+ 
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+.c-button[disabled] {
+    color: #d2d5db;
+    background: #6c7589;
+    cursor: not-allowed;
+}
+.text1{
+    width: 200px; /*親要素いっぱい広げる*/
+    padding: 5px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
