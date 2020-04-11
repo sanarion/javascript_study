@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex18-08</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>スタイルの変更</h1>
+  </header>
+  <div id="buttonspace" >
+    <input type="text" class="text1" name="word" id="searchkey">
+    <input type="button" class="c-button" value="検索" onclick="highlightParas();">
+    <button class="c-button" type="button" onclick="removeParaHighlights();">クリア</button>
+  </div>
+  <div id="content">
+    <p>第一段落にはユニークという単語が含まれています。</p>
+    <p>第二段落には含まれていません。</p>
+    <p>第三段落</p>
+    <p>ユニーク</p>
+    <p>ユニーク</p>
+  </div>
+  <div class="text-align: left;">
+    <button data-action="highlight" data-containing="ユニーク">
+      ユニークという文字を含む段落をハイライト
+    </button>
+    <button data-action="removeHighlights">
+      ハイライトをやめる
+    </button>
+
+    <div class="margin-top: 2em; background-color: pink; width:40em; padding: 1em; text-align: center;">
+      <p>
+        この例では準備しただけ<br/>
+      </p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

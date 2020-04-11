@@ -1,5 +1,6 @@
-function highlightParas() {
-  let containing = document.getElementById('searchkey').value;
+function highlightParas(containing) {
+  if (!containing)
+    containing = document.getElementById('searchkey').value;
   console.log(typeof containing);
   console.log(containing);
   if (typeof containing === 'string') {
@@ -19,4 +20,20 @@ function removeParaHighlights() {
   for (let p of paras) {
     p.classList.remove('highlight');
   }
+}
+
+const hilightActions = document.querySelectorAll('[data-action="highlight"]');
+for(let a of hilightActions) {
+  a.addEventListener('click',evt => {
+    evt.preventDefault();
+    highlightParas(a.dataset.containing);
+  });
+}
+
+const removeHighlightActions = document.querySelectorAll('[data-action="removeHighlights"]');
+for (let a of removeHighlightActions) {
+  a.addEventListener('click', evt => {
+    evt.preventDefault();
+    removeParaHighlights();
+  })
 }
